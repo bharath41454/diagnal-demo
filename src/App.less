@@ -1,0 +1,21 @@
+@import "./style/variables.less";
+@import "./components/components.less";
+@import "./pages/pages.less";
+body {
+  background-color: @black !important;
+}
+.app {
+  margin: auto;
+  scroll-behavior: smooth;
+  // height: 100vh;
+}
+
+.app.container-fluid {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+::-webkit-scrollbar {
+  width: 0 !important;
+  display: none !important;
+}

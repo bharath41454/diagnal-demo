@@ -1,0 +1,57 @@
+.navbar {
+  z-index: 100;
+  padding: 0 5%;
+  width: 100%;
+  height: 100px;
+  min-height: 100px;
+  background-color: @black;
+  background: url("@{imagePath}/nav_bar.png") top no-repeat;
+  background-size: cover;
+  color: @white;
+  position: fixed !important;
+  top: 0;
+  right: 0;
+  left: 0;
+  .back {
+    position: relative;
+    background: url("@{imagePath}/Back.png") top no-repeat;
+    background-size: 20px;
+    width: 20px;
+    height: auto;
+    margin-right: 10px;
+  }
+  .search {
+    margin: auto;
+    position: absolute;
+    content: "\a";
+    background: url("@{imagePath}/search.png") no-repeat;
+    background-position: right;
+    background-size: 20px;
+    width: 0;
+    height: 20px;
+    right: 4%;
+    outline: none !important;
+    border: none !important;
+    transition: width 0.3s, background-color 0.4s, background-size 0.3s;
+    &::placeholder {
+      color: transparent;
+    }
+    &:focus {
+      &::placeholder {
+        color: @raven;
+      }
+      right: 3%;
+      box-shadow: none;
+      color: @white;
+      background-image: none;
+      padding: 12px;
+      background-color: @nero;
+      background-size: 0px;
+      width: 35%;
+    }
+  }
+}
+
+.navbar-nav {
+  flex-direction: row !important;
+}
